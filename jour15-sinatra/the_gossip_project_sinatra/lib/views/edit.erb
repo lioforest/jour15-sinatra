@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>modifier un potin</title>
+</head>
+<body>
+		<div>
+			<h1> Editer un potin </h1>
+			<h2>Potin numero <%= params['id'][0] %></h2>
+		</div>
+		<div>
+			<form action='/gossip/<%= params['id'] %>/edit/' method='POST'>
+				Auteur :<br>
+				<textarea name="gossip_author" id="content" rows="1" cols="33"><%= gossips.author %></textarea><br>
+				THPotin:<br>
+				<textarea name="gossip_content" id="content" rows="5" cols="33"><%= gossips.content %></textarea><br>
+				<input type="submit" value="Envoyer" />
+			</form> 
+		</div>	
+</body>
+</html>

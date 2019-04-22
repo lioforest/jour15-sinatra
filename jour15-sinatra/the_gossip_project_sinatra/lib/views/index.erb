@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Gossip Project</title>
+</head>
+<body>
+    <h1>Mon super site de gossip, depuis le dossier views !</h1>
+    <a href="/gossips/new/">Créer un nouveau potin</a>
+
+
+    <br>
+    <p>
+    Voici la liste actuelle des potins :
+    <% gossips.each.with_index do |gossip, index| %>
+        <p>
+         <a href="/gossip/<%= index%>">Potin N° <%= index%></a>
+          <br/>
+        <textarea name="gossip_content" id="content" rows="1" cols="33"><%= gossip.author %></textarea>
+        <textarea name="gossip_content" id="content" rows="1" cols="60"><%= gossip.content %></textarea><br>
+         <a href="/gossip/<%= index%>/edit/">Cliques ici pour modifier ce potin<br/></a>
+
+        </p>
+      <% end %>
+    </p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Gossip Project - page détail</title>
+</head>
+<body>
+      		<div>
+			<h1> Le détail du potin </h1>
+			<h2> Potin numero <%= params['id'] %></h2>
+		</div>
+		<div>
+				Auteur :<br>
+				<textarea name="gossip_content" id="content" rows="1" cols="33"><%= gossips.author %></textarea><br>
+				Potin:<br>
+				<textarea name="gossip_content" id="content" rows="5" cols="33"><%= gossips.content %></textarea><br>
+		</div>
+		</br>
+    <a href="/">Retour à la liste des potins </a>
+
+</body>
+</html>
